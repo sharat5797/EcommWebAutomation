@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13ecee0f-ef76-4818-bb9d-9e952e7889ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/LauncherPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/drivers/DriverCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/LauncherPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/LauncherPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.SearchTest">
+  <component name="RunManager" selected="Gradle.SearchTest.verifyIfSearchTermShowsRelevantResults">
     <configuration name="EcommWebAutomation [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -124,6 +125,30 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="SearchTest.verifyIfSearchTermShowsRelevantResults" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SearchTest.verifyIfSearchTermShowsRelevantResults&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="SearchTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -150,6 +175,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SearchTest.verifyIfSearchTermShowsRelevantResults" />
         <item itemvalue="Gradle.SearchTest" />
         <item itemvalue="Gradle.SearchTests" />
         <item itemvalue="Gradle.EcommWebAutomation [build]" />
