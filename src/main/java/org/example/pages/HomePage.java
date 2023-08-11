@@ -1,23 +1,21 @@
 package org.example.pages;
+
 import org.example.models.Item;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
-public class HomePage {
-    WebDriver webDriver;
-    By searchIcon = By.cssSelector("summary[aria-label='Search']");
+public class HomePage extends BasePage {
+    By searchIcon = By.xpath("//*[@id=\"shopify-section-header\"]/sticky-header/header/div/details-modal/details/summary");
     By searchBar = By.id("Search-In-Modal");
     By searchResults = By.cssSelector("li[id^='predictive-search-option'] a");
+    By productName = By.cssSelector(".predictive-search__item-heading h5");
 
-    // Scoped Element
-    By productName = By.cssSelector(".predictive-search__item-heading");
-
-    public HomePage(WebDriver webDriver) {
-        this.webDriver = webDriver;
+    public HomePage (WebDriver webDriver) {
+        super(webDriver);
     }
 
     public HomePage search(String searchItem) {
@@ -27,9 +25,9 @@ public class HomePage {
     }
 
     public List<Item> getSearchItems() {
-        List<WebElement> elements = webDriver.findElements(searchResults);
+        List<WebElement> elements = waits.waitUntilAllElementsAreVisible(searchResults);
         List<Item> items = new ArrayList<>();
-        for(WebElement element : elements) {
+        for (WebElement element: elements) {
             String name = element.findElement(productName).getText();
             Item item = new Item();
             item.setName(name);
@@ -38,9 +36,7 @@ public class HomePage {
         return items;
     }
 
-    public int getItemCount(){
-        List<Item> items = new ArrayList<>();
-       items = getSearchItems();
-       return items.size();
-    }
+//    public int getItemCount(){
+//        return getSearchItems().size();
+//    }
 }

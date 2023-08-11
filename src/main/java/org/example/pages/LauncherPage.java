@@ -6,13 +6,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LauncherPage {
-    private WebDriver webDriver;
-
+public class LauncherPage extends BasePage {
     public LauncherPage(WebDriver webDriver) {
-        this.webDriver = webDriver;
+        super(webDriver);
     }
-
 
     public boolean navigateTo(String url) {
         webDriver.get(url);
@@ -20,7 +17,7 @@ public class LauncherPage {
     }
 
     public boolean isSiteLoaded() {
-        return new WebDriverWait(webDriver, Duration.ofSeconds(10)).until(
-                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+        return new WebDriverWait(webDriver, Duration.ofSeconds(10)).until(webDriver ->
+                ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
     }
 }
